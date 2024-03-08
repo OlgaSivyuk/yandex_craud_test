@@ -1,0 +1,186 @@
+/* Общие стили */
+
+.page {
+    min-width: 1100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header {  
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    height: 100vh;
+    min-height: 700px;
+    max-height: 774px;
+    width: 100%;
+    margin: 0;
+    padding: 26px 72px 0 72px;
+    /* justify-content: flex-start; */
+    color: #313131;
+   
+}
+
+.logo_place_header {
+    text-align: left;
+    /* position: absolute; */
+    /* left: 72px; */
+    /* top: 26px; */
+    height: 36px;
+    width: 245px;
+    /* z-index: 5; */
+    
+}
+
+
+.header__title_up {
+    display: flex;
+    left: 72px;
+    line-height: 110%;
+    max-width: 542px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /* z-index: 4; */
+    text-transform: uppercase;
+    margin: 72px 0 0 ;
+}
+
+.header__title_down {
+    display: flex;
+    /* left: 72px; */
+    line-height: 110%;
+    max-width: 542px;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    /* z-index: 4; */
+    text-transform: uppercase;
+}
+
+.header__subtitle {
+    /* position: absolute; */
+    /* left: 64px; */
+    /* bottom: 30px; */
+    line-height: 130%;
+    width: 542px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    margin: 26px 0 26px;
+}
+
+
+
+.buttons {
+    position: relative;
+    display: flex;
+    width: 542px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    width: 542px;
+    height: 72px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border: 2px solid #1F1F1F;
+    border-radius: 66px;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+    padding: 0;
+    margin: 8px;
+}
+
+.button:hover {
+    background-color: #FBCE51;
+    color: #1F1F1F;
+    border: 2px solid #FBCE51;
+    opacity: 1;
+    right: 0;
+  }
+
+.button_secondary {
+    background-color: transparent;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.button_secondary:hover {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border: 2px solid #1F1F1F;
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+/* Бегущая строка */
+.marquee-block {
+    display: flex;
+    margin-top: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: marquee 45s linear infinite;
+    height: 60px;
+    background-color: #F54932;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Блок из 2х колонок */
+.two-column-block {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+}
+
+/* Блок из 2х колонок с таблицей */
+.two-column-table-block {
+    display: flex;
+    margin-top: 20px;
+}
+
+.right-column table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.right-column table td {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+/* Заголовок */
+.title-block {
+    margin-top: 20px;
+}
+
+/* Футтер */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
