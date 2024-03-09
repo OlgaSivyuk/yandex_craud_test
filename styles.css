@@ -1,11 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+
 /* Общие стили */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
 .page {
-    min-width: 1100px;
-    max-width: 1600px;
+
     margin: 0 auto;
     padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Merriweather", sans-serif;
+    height: 100vh;
 }
 
 .header {  
@@ -15,9 +22,10 @@
     background-image: url('/images/background.png');
     background-size: cover;
     height: 100vh;
-    min-height: 700px;
+    width: 100vw;
+    /* min-height: 700px; */
     max-height: 774px;
-    width: 100%;
+    /* width: 100%; */
     margin: 0;
     padding: 26px 72px 0 72px;
     /* justify-content: flex-start; */
@@ -129,33 +137,92 @@
 
 
 /* Бегущая строка */
-.marquee-block {
+
+.running-line {
     display: flex;
-    margin-top: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: marquee 45s linear infinite;
+    align-items: center;
+    margin: 0;
     height: 60px;
     background-color: #F54932;
+    overflow: hidden;
 }
 
+.marquee-block {
+    list-style: none;
+    /* list-style-type: disc; Используем буллеты для обозначения нового текста */
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Для применения анимации к бегущей строке */
+    white-space: nowrap; /* Строки не переносятся на новую строку */
+    animation: marquee 45s linear infinite; /* Анимация: прокрутка с постоянной скоростью */
+}
+ 
+    /* display: inline;
+    overflow-x: hidden;
+    overflow: hidden; 
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 45s linear infinite;  */
+
+
+.marquee-text {
+    display: inline-block;
+    padding-right: 40px; /* Промежуток между текстами */
+ margin: 0;
+ color: #FFFFFF;
+ align-items: center;
+ text-transform: uppercase;
+ line-height: 110%;
+ font-size: 22px;
+ font-style: normal;
+ font-weight: normal;
+}
+
+.marquee-text::before {
+    content: "• "; /* Добавляем буллет перед текстом */
+}
+
+
 @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(0%); } /* Начало анимации: текст за экраном */
+    100% { transform: translateX(-50%); } /* Конец анимации: текст за экраном */
 }
 
 /* Блок из 2х колонок */
-.two-column-block {
+.inform-block {
     display: flex;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 72px 0 72px;
 }
 
-.left-column {
-    flex: 1;
+.inform-block__text {
+    max-width: 764px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-.right-column {
-    flex: 1;
+.inform-text {
+    line-height: 135%;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.styled-text {
+    font-style: bold;
+    color: #F54932;
+}
+
+.inform-block__image {
+    max-width: 394px;
+}
+
+.inform-image {
+ 
 }
 
 /* Блок из 2х колонок с таблицей */
