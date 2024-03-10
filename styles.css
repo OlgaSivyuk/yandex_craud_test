@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=GolosText&display=swap");
 
 /* Общие стили */
 * {
@@ -33,15 +34,10 @@
    
 }
 
-.logo_place_header {
+.logo {
     text-align: left;
-    /* position: absolute; */
-    /* left: 72px; */
-    /* top: 26px; */
     height: 36px;
-    width: 245px;
-    /* z-index: 5; */
-    
+    width: 245px;   
 }
 
 
@@ -56,14 +52,12 @@
     text-align: left;
     margin: 0;
     padding: 0;
-    /* z-index: 4; */
     text-transform: uppercase;
     margin: 72px 0 0 ;
 }
 
 .header__title_down {
     display: flex;
-    /* left: 72px; */
     line-height: 110%;
     max-width: 542px;
     font-size: 60px;
@@ -71,14 +65,11 @@
     font-weight: 400;
     text-align: center;
     margin: 0;
-    /* z-index: 4; */
     text-transform: uppercase;
 }
 
 .header__subtitle {
-    /* position: absolute; */
-    /* left: 64px; */
-    /* bottom: 30px; */
+    font-family: "GolosText", sans-serif;
     line-height: 130%;
     width: 542px;
     font-size: 18px;
@@ -90,15 +81,17 @@
 
 
 
-.buttons {
+.header__buttons {
     position: relative;
     display: flex;
+    gap: 16px;
     width: 542px;
     align-items: center;
     justify-content: space-between;
+ 
 }
 
-.button {
+.header__button {
     width: 542px;
     height: 72px;
     background-color: #1F1F1F;
@@ -108,8 +101,13 @@
     cursor: pointer;
     transition: all 0.5s;
     text-align: center;
-    padding: 0;
-    margin: 8px;
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    padding: 0 49px;
+margin: 0;
 }
 
 .button:hover {
@@ -134,52 +132,43 @@
     right: 0;
   }
 
-
-
 /* Бегущая строка */
 
 .running-line {
     display: flex;
     align-items: center;
     margin: 0;
+    padding: 18px 0;
     height: 60px;
     background-color: #F54932;
     overflow: hidden;
 }
 
-.marquee-block {
+.running-line__texts {
     list-style: none;
-    /* list-style-type: disc; Используем буллеты для обозначения нового текста */
     margin: 0;
     padding: 0;
-    display: inline-block; /* Для применения анимации к бегущей строке */
-    white-space: nowrap; /* Строки не переносятся на новую строку */
-    animation: marquee 45s linear infinite; /* Анимация: прокрутка с постоянной скоростью */
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 45s linear infinite;
 }
  
-    /* display: inline;
-    overflow-x: hidden;
-    overflow: hidden; 
-    white-space: nowrap;
+.running-line__text {
     display: inline-block;
-    animation: marquee 45s linear infinite;  */
-
-
-.marquee-text {
-    display: inline-block;
-    padding-right: 40px; /* Промежуток между текстами */
- margin: 0;
- color: #FFFFFF;
- align-items: center;
- text-transform: uppercase;
- line-height: 110%;
- font-size: 22px;
- font-style: normal;
- font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    align-items: center;
+    text-transform: uppercase;
+    line-height: 110%;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
 }
 
-.marquee-text::before {
-    content: "• "; /* Добавляем буллет перед текстом */
+.running-line__text::before {
+    content: "•";
+    padding: 0 12px;
 }
 
 
@@ -188,7 +177,7 @@
     100% { transform: translateX(-50%); } /* Конец анимации: текст за экраном */
 }
 
-/* Блок из 2х колонок */
+/* информационный блок */
 .inform-block {
     display: flex;
     align-items: center;
@@ -196,14 +185,14 @@
     padding: 80px 72px 0 72px;
 }
 
-.inform-block__text {
+.inform-block__title {
     max-width: 764px;
     text-align: center;
     padding: 0;
     margin: 0;
 }
 
-.inform-text {
+.inform-block__title_text {
     line-height: 135%;
     font-size: 36px;
     font-style: normal;
@@ -218,27 +207,106 @@
 }
 
 .inform-block__image {
-    max-width: 394px;
+    margin: 0;
+    padding: 0;
 }
 
 .inform-image {
- 
+    max-width: 394px;
 }
 
 /* Блок из 2х колонок с таблицей */
-.two-column-table-block {
+.session-details {
     display: flex;
-    margin-top: 20px;
+    gap: 22px;
+    padding: 20px 72px 0 45px;
+    margin: 0px;
 }
 
-.right-column table {
+.session-details__image {
+    margin: 0;
+    padding: 0;
+}
+
+.session-image {
+    width: 530px;
+    height: auto;
+}
+
+.session-details__container {
+    width: 704px;
+    padding: 44px 0 0;
+}
+
+.session-details__title_text {
+    line-height: 135%;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0 0 60px 0;
+}
+
+.session-details__table {
     width: 100%;
     border-collapse: collapse;
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-style: normal;
+    font-weight: 400;
+    color: #313131;
+     /* font-variant-numeric: lining-nums proportional-nums; */
 }
 
-.right-column table td {
-    border: 1px solid #000;
-    padding: 5px;
+.session-details__table th {
+    font-weight: normal;
+    border-bottom: 2px solid #D0D0D0;
+    border-right: 2px solid #D0D0D0;
+    text-align: left;
+    padding: 16px 16px 16px 0;
+    width: 300px;
+}
+
+.session-details__table td {
+    font-weight: bold;
+    border-bottom: 2px solid #D0D0D0;
+    padding: 16px;
+}
+
+
+.session-details__table td {
+    border-left: none; 
+    border-right: none;
+}
+
+.session-details__table tr:first-child td {
+    border-top: none;
+}
+
+.session-details__table tr:last-child td {
+    border-bottom: none;
+}
+
+.session-details__table tr:last-child th {
+    border-bottom: none;
+}
+
+.session-details__styled-text {
+    text-decoration: line-through #F54932;
+}
+
+.session-details__message-text {
+    padding: 48px 0 0 0;
+    font-family: "Golos Text", sans-serif;
+    color: #3057A2;
+    font-size: 20px;
+    line-height: 120%;
+    font-style: normal;
+    font-weight: 400;
+    /* font-variant-numeric: lining-nums proportional-nums; */
 }
 
 /* Заголовок */

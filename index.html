@@ -3,100 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Макет сайта</title>
+    <title>Клуб четырех коней</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="page">
     <!-- Основной блок -->
    
         <header class="header">
-            <img alt="Клуб четырех коней" class="logo logo_place_header" src="/images/logo.svg">
+            <img alt="Клуб четырех коней" class="logo" src="/images/logo.svg">
             <h1 class="header__title_up">Превратите уездный город</h1>
             <h1 class="header__title_down">в сталицу земного шара</h1>
             <p class="header__subtitle">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
-            <div class="buttons">
-                <button class="button button_primary">Поддержать шахматную мысль</button>
-                <button class="button button_secondary">Подробнее о турнире</button>
+            <div class="header__buttons">
+                <button class="header__button button_primary">Поддержать шахматную мысль</button>
+                <button class="header__button button_secondary">Подробнее о турнире</button>
             </div>
-            <!-- <img alt="Фрагмент картины Опять двойка" class="header__main-illustration" src="/images/background.png"> --> 
+            <!-- <img alt="Фрагмент " class="header__main-illustration" src="/images/background.png"> --> 
         </header>
 
-   
-
-    <!-- <header class="header">
-        <img alt="Клуб четырех коней" class="logo-block logo logo_place_header" src="/images/logo.svg">
-        <h1 class="header__title">Научиться учиться </h1>
-        <p class="header__subtitle">Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни? <a href="#" class="header__link">Узнать &rarr;</a></p>
-        <div class="header__square-pic rotation"></div>
-        <img alt="Фрагмент картины Опять двойка" class="header__main-illustration" src="/images/background.png">
-      </header> -->
-
-    <!-- Блок с бегущей строкой -->
-    <section class="running-line">
-        <ul class="marquee-block">
-            <li class="marquee-text">Дело помощи утопающим — дело рук самих утопающих!</li>
-            <li class="marquee-text">Шахматы двигают вперед не только культуру, но и экономику!</li>
-            <li class="marquee-text">Лед тронулся, господа присяжные заседатели!</li>
-            <li class="marquee-text">Дело помощи утопающим — дело рук самих утопающих!</li>
-            <li class="marquee-text">Шахматы двигают вперед не только культуру, но и экономику!</li>
-            <li class="marquee-text">Лед тронулся, господа присяжные заседатели!</li>
+    <section class="running-line top">
+        <ul class="running-line__texts">
+            <li class="running-line__text">Дело помощи утопающим — дело рук самих утопающих!</li>
+            <li class="running-line__text">Шахматы двигают вперед не только культуру, но и экономику!</li>
+            <li class="running-line__text">Лед тронулся, господа присяжные заседатели!</li>
+            <li class="running-line__text">Дело помощи утопающим — дело рук самих утопающих!</li>
+            <li class="running-line__text">Шахматы двигают вперед не только культуру, но и экономику!</li>
+            <li class="running-line__text">Лед тронулся, господа присяжные заседатели!</li>
         </ul>
     </section>
 
-    <!-- Блок из 2х колонок -->
+   <main class="main">
+
     <article class="inform-block">
-        <div class="inform-block__text">
-            <p class="inform-text">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:</p> 
-            <p class="inform-text styled-text">«Плодотворная дебютная идея»</p>
+        <div class="inform-block__title">
+            <h2 class="inform-block__title_text">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему:</h2> 
+            <h2 class="inform-block__title_text styled-text">«Плодотворная дебютная идея»</h2>
         </div>
         <div class="inform-block__image">
-            <img class="inform-image" alt="Шахматисты" class="" src="/images/elips.png">
-        </div><!-- Картинка -->
+            <img class="inform-image" alt="Играет группа шахматистов" src="/images/elips.png">
+        </div>
     </article>
 
     <!-- Блок из 2х колонок с таблицей -->
-    <div class="two-column-table-block">
-        <div class="left-column">
-            <img class="inform-image" alt="Шахматисты" class="" src="/images/master.jpeg">
+    <article class="session-details">
+        <div class="session-details__image">
+            <img class="session-image" alt="Шахматисты" class="" src="/images/master.jpeg">
         </div>
-        <div class="right-column">
-            <h3>Этапы преображения Васюков</h3>
-            <table>
+        <div class="session-details__container">
+            <h2 class="session-details__title_text">и Сеанс <span class="styled-text">одновременной игры в&nbsp;шахматы на 160 досках</span> гроссмейстера О. Бендера</h2>
+            <table class="session-details__table">
                 <tr>
-                    <td>место проведения</td>
-                    <td>клуб</td>
+                    <th>Место проведения:</th>
+                    <td>Клуб «Картонажник»</td>
                 </tr>
                 <tr>
-                    <td>дата и время</td>
-                    <td>22 июня</td>
+                    <th>Дата и время мероприятия:</th>
+                    <td>22 июня 1927 г. в 18:00</td>
                 </tr>
                 <tr>
-                    <td>стоимость</td>
-                    <td>50 коп</td>
+                    <th>Стоимость входных билетов:</th>
+                    <td>20 коп.</td>
                 </tr>
                 <tr>
-                    <td>взнос</td>
-                    <td>21 руб</td>
+                    <th>Плата за игру:</th>
+                    <td>50 коп.</td>
+                </tr>
+                <tr>
+                    <th>Взнос на телеграммы:</th>
+                    <td><span class="session-details__styled-text">100 руб.</span> 21 руб. 16 коп.</td>
                 </tr>
             </table>
-            <p>обращаться в....</p>
+            <p class="session-details__message-text">По всем вопросам обращаться в администрацию к К. Михельсону</p>
         </div>
-    </div>
+    </article>
 
     <!-- Заголовок -->
     <div class="title-block">
         <h3>Этапы преображения Васюков</h3>
     </div>
-    <section class="running-line">
-        <ul class="marquee-block">
-            <li class="marquee-text">Дело помощи утопающим — дело рук самих утопающих!</li>
-            <li class="marquee-text">Шахматы двигают вперед не только культуру, но и экономику!</li>
-            <li class="marquee-text">Лед тронулся, господа присяжные заседатели!</li>
-            <li class="marquee-text">Дело помощи утопающим — дело рук самих утопающих!</li>
-            <li class="marquee-text">Шахматы двигают вперед не только культуру, но и экономику!</li>
-            <li class="marquee-text">Лед тронулся, господа присяжные заседатели!</li>
-        </ul>
-    </section>
+
+</main>
+
+<section class="running-line bottom">
+    <ul class="running-line__texts">
+        <li class="running-line__text">Дело помощи утопающим — дело рук самих утопающих!</li>
+        <li class="running-line__text">Шахматы двигают вперед не только культуру, но и экономику!</li>
+        <li class="running-line__text">Лед тронулся, господа присяжные заседатели!</li>
+        <li class="running-line__text">Дело помощи утопающим — дело рук самих утопающих!</li>
+        <li class="running-line__text">Шахматы двигают вперед не только культуру, но и экономику!</li>
+        <li class="running-line__text">Лед тронулся, господа присяжные заседатели!</li>
+    </ul>
+</section>
+
+
     <!-- Футтер -->
     <footer>
         <p>Все персонажи, события и цитаты являются вымышленными</p>
