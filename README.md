@@ -1,2 +1,2 @@
 # yandex_craud_test
-GitHub Pages:
+GitHub Pages: none
