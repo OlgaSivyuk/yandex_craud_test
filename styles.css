@@ -110,7 +110,7 @@
 margin: 0;
 }
 
-.button:hover {
+.header__button:hover {
     background-color: #FBCE51;
     color: #1F1F1F;
     border: 2px solid #FBCE51;
@@ -238,7 +238,7 @@ margin: 0;
     padding: 44px 0 0;
 }
 
-.session-details__title_text {
+.session-details__title {
     line-height: 135%;
     font-size: 36px;
     font-style: normal;
@@ -258,7 +258,7 @@ margin: 0;
     font-style: normal;
     font-weight: 400;
     color: #313131;
-     /* font-variant-numeric: lining-nums proportional-nums; */
+    font-variant-numeric: lining-nums proportional-nums;
 }
 
 .session-details__table th {
@@ -299,20 +299,122 @@ margin: 0;
 }
 
 .session-details__message-text {
-    padding: 48px 0 0 0;
+    margin: 48px 0 0 0;
     font-family: "Golos Text", sans-serif;
     color: #3057A2;
     font-size: 20px;
     line-height: 120%;
     font-style: normal;
     font-weight: 400;
-    /* font-variant-numeric: lining-nums proportional-nums; */
+    font-variant-numeric: lining-nums proportional-nums;
 }
 
-/* Заголовок */
-.title-block {
-    margin-top: 20px;
+
+
+.vasuki {
+    padding: 200px 0 0 72px;
 }
+
+.vasuki__title-container {
+    max-width: 806px;
+    margin: 0 0 54px;
+}
+
+.vasuki__title {
+    position: relative;
+    font-family: "Merriweather", sans-serif;
+    font-size: 54px;
+    line-height: 120%;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #313131;
+    font-variant-numeric: lining-nums proportional-nums;
+}
+
+.vasuki__subtitle {
+    position: absolute;
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 400;
+    font-style: normal;
+    text-transform:none;
+    color: #3057A2;
+    width: 280px;
+    left: 300px;
+    bottom: 10px;
+    font-variant-numeric: lining-nums proportional-nums;
+}
+
+.vasuki-grid__cards {
+    position: relative;
+    max-width: 1284px;
+    display: grid;
+    grid-template-columns: repeat(3, 394px);
+    grid-template-rows: 112px 112px 136px;
+    gap: 20px;
+    overflow: hidden;
+
+    margin: 0 0 54px;
+}
+
+.vasuki-grid__card {
+    display: flex;
+    gap: 16px;
+    background: url("/images/card-bcg.png");
+    background-size: cover;
+    background-position: center;
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 400;
+    font-style: normal;
+    text-transform:none;
+    color: #313131;
+    padding: 20px;
+}
+
+.vasuki-grid__card-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 60px;
+    background: #FFFFFF;
+
+}
+
+.vasuki-grid__card-content {
+    max-width: 302px;
+}
+
+.double-vertical {
+        grid-column-start: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+}
+
+.double-horizontal {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.double-horizontal .vasuki-grid__card-content {
+    max-width: 446px;
+}
+
+.vasuki-grid__image {
+    position: absolute;
+    width: 377px;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+}
+
+
 
 /* Футтер */
 footer {
