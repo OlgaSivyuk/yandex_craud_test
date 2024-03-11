@@ -355,8 +355,6 @@ margin: 0;
     grid-template-rows: 112px 112px 136px;
     gap: 20px;
     overflow: hidden;
-
-    margin: 0 0 54px;
 }
 
 .vasuki-grid__card {
@@ -414,10 +412,68 @@ margin: 0;
     z-index: 4;
 }
 
+.players {
+    padding: 200px 72px 0;
+}
+
+.players__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.players__title {
+    font-family: "Merriweather", sans-serif;
+    font-size: 54px;
+    line-height: 120%;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #313131;
+    font-variant-numeric: lining-nums proportional-nums;
+}
+
+.players__buttons {
+    display: flex;
+    max-width: 151px;
+    justify-content: center;
+    align-items: center;
+}
+
+.players__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+}
+
+.players__button:hover {
+    background-color: #FBCE51;
+}
+
+
 
 
 /* Футтер */
-footer {
-    margin-top: 20px;
-    text-align: center;
+.footer {
+    height: 120px;
+    margin: 0px;
+    padding: 40px 72px;
+    text-align: left;
+    background-color: #E9DED4;
+}
+
+.footer__text {
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 400;
+    font-style: normal;
+    text-transform:none;
+    color: #313131;
 }
