@@ -421,6 +421,7 @@ margin: 0;
 .players__container {
     display: flex;
     justify-content: space-between;
+
 }
 
 .players__title {
@@ -466,6 +467,9 @@ align-items: center;
 justify-content: center;
 margin-top: 60px;
 margin-bottom: 140px;
+justify-content: space-between;
+overflow: hidden;
+/* display: none; */
 }
 
 .players__slide-content {
