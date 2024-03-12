@@ -414,6 +414,8 @@ margin: 0;
 
 .players {
     padding: 200px 72px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .players__container {
@@ -457,7 +459,105 @@ margin: 0;
 }
 
 
+.players__slide-container {
+display: flex;
+gap: 20px;
+align-items: center;
+justify-content: center;
+margin-top: 60px;
+margin-bottom: 140px;
+}
 
+.players__slide-content {
+    /* margin: 0 37px; */
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.players__image-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+padding: 0 37px;
+
+}
+
+.players__card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+padding: 0 37px;
+margin-top: 28px;
+row-gap: 6px;
+}
+
+.players__card {
+    background-color: inherit;
+    border: none;
+    width: 394px;
+    flex: 0 0 33.33%;
+}
+
+.players__card-image {
+    position: relative;
+    height: 320px;
+    width: 320px;
+}
+
+.players__card-img {
+    height: 100%;
+    width: 100%;
+object-fit: cover;
+border-radius: 50%;
+
+}
+
+.players__name {
+    font-family: "Golos Text", sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 700;
+    font-style: normal;
+    text-transform:none;
+    color: #313131;
+}
+
+.players__description {
+    font-family: "Golos Text", sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 400;
+    font-style: normal;
+    text-transform:none;
+    color: #151515;
+}
+
+.players__card-button {
+    border-radius: 62px;
+    padding: 0 12px;
+    width: 113px;
+    height: 35px;
+    color: #3057A2;
+    background-color: inherit;
+    border: 2px solid #3057A2;
+    cursor: pointer;
+    transition: all 0.5s;
+    text-align: center;
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 14px;
+}
+
+.players__card-button:hover {
+  
+    color: #FFFFFF;
+    background-color: #3057A2;
+    border: 2px solid #3057A2;
+    
+}
 
 /* Футтер */
 .footer {
